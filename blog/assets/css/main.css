@@ -2098,9 +2098,8 @@ body
 
 body
 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: /* 'Source Sans Pro', sans-serif */ 'Pagination';
     font-weight: 400;
-
     color: #565656;
     background-color: #e8e8e8;
     background-image: url('images/bg02.png');
@@ -3176,7 +3175,7 @@ ol.default li
     {
         font-size: 1em;
     }
-    p#post
+    .post_ p
     {
         font-family: 'ProximaNova';
         font-size: 20px;
