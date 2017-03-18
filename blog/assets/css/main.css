@@ -128,10 +128,10 @@ q
     quotes: none;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after
+blockquote::before,
+blockquote::after,
+q::before,
+q::after
 {
     content: '';
     content: none;
@@ -151,8 +151,8 @@ body
 /* Box Model */
 
 *,
-*:before,
-*:after
+*::before,
+*::after
 {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -364,8 +364,8 @@ body
     box-sizing: border-box;
 }
 
-.row:after,
-.row:before
+.row::after,
+.row::before
 {
     display: block;
     clear: both;
@@ -2354,6 +2354,8 @@ article:last-child
     margin-bottom: 0;
 }
 
+
+
 /* Image */
 
 .image
@@ -2793,7 +2795,7 @@ ol.default li
     padding-right: 34px;
 }
 
-.box.search form:before
+.box.search form::before
 {
     font-family: FontAwesome;
     font-size: 18px;
@@ -2843,7 +2845,7 @@ ol.default li
     text-decoration: none;
 }
 
-.icon:before
+.icon::before
 {
     font-family: FontAwesome;
     font-weight: normal;
@@ -2986,7 +2988,7 @@ ol.default li
     height: 60px;
 }
 
-#titleBar .toggle:before
+#titleBar .toggle::before
 {
     font-family: FontAwesome;
     font-size: 14px;
@@ -3017,7 +3019,7 @@ ol.default li
     -moz-osx-font-smoothing: grayscale;
 }
 
-#titleBar .toggle:active:before
+#titleBar .toggle:active::before
 {
     background-color: #d95673;
 }
@@ -3055,8 +3057,8 @@ ol.default li
     margin: 2em 0 0 0;
 }
 
-#sidebar section:before,
-#sidebar nav:before
+#sidebar section::before,
+#sidebar nav::before
 {
     display: block;
 
@@ -3181,6 +3183,17 @@ ol.default li
         font-size: 20px;
         line-height: 1.25em;
     }
+    /* popupSocial Like share facebook*/
+    /* .popupSocial{
+        z-index:999;text-align:center; 
+        background: #364050 url('images/bg01.png');
+        position:fixed;
+        top:50%;
+        left: 20%;
+        padding:20px 10px;
+        border:1px solid #333; 
+        border-radius:10px;
+    } */
     a{
         text-decoration: none;
     }
@@ -3324,15 +3337,15 @@ ol.default li
 						from looking insane on really wide displays. It's currently set
 						to the width of the sample post images, but you can change it to
 						whatever you like (or remove it entirely).
-                     */
-                     max-width: 1038px;
-                     padding-bottom: 6em;
-                 }
+                       */
+                       max-width: 1038px;
+                       padding-bottom: 6em;
+                   }
 
-                 /* Sidebar */
+                   /* Sidebar */
 
-                 #sidebar
-                 {
+                   #sidebar
+                   {
                     position: absolute;
                     top: 0;
                 }
@@ -3352,7 +3365,7 @@ ol.default li
                     line-height: 2em;
                 }
 
-                #copyright:before
+                #copyright::before
                 {
                     height: .5em;
                     margin: 0 0 2em 0;
@@ -3482,7 +3495,7 @@ ol.default li
                     text-align: right;
                 }
 
-                .box.post .info .stats li a:before
+                .box.post .info .stats li a::before
                 {
                     font-size: 16px;
 
@@ -3590,7 +3603,7 @@ ol.default li
                     padding-right: .5em;
                 }
 
-                .box.post .info .stats li a:before
+                .box.post .info .stats li a::before
                 {
                     position: relative;
 
@@ -3645,7 +3658,7 @@ ol.default li
                     margin-top: 0 !important;
                 }
 
-                #nav:before
+                #nav::before
                 {
                     display: none !important;
                 }
@@ -3783,7 +3796,7 @@ ol.default li
                     opacity: .5;
                 }
 
-                .box.post .info .stats li a:before
+                .box.post .info .stats li a::before
                 {
                     position: relative;
                     top: .1em;
@@ -3812,7 +3825,7 @@ ol.default li
                     margin-top: 0 !important;
                 }
 
-                #nav:before
+                #nav::before
                 {
                     display: none !important;
                 }
@@ -3854,7 +3867,7 @@ ol.default li
                     line-height: 2em;
                 }
 
-                #copyright:before
+                #copyright::before
                 {
                     height: .5em;
                     margin: 0 0 2em 0;
