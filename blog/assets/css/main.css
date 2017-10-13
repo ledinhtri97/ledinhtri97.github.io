@@ -2358,6 +2358,8 @@ article:last-child
 
 /* Image */
 
+
+
 .image
 {
     display: inline-block;
@@ -2375,6 +2377,26 @@ article:last-child
     display: block;
 
     width: 100%;
+}
+.rotate-90 {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+     display: block;
+    margin: 0 0 1em 0;
+}
+.image.title {
+    display: block;
+    margin: 0 0 1em 0;
+ 
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
 }
 
 .image.featured
@@ -3343,7 +3365,7 @@ ol.default li
                        */
 
                        max-width: 1038px;
-                       padding-bottom: 6em;
+                       padding-bottom: 3em;
                    }
 
                    /* Sidebar */
@@ -3924,7 +3946,7 @@ ol.default li
                 {
                     width: 14em;
                     position: fixed;
-                    z-index: 9000;
+                    z-index: -9000;
                     top: 0;
 
                     display: block;

@@ -1,0 +1,16 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		document.getElementById("myDate").value = Date();
+	</script>
+	<script type="text/javascript" src="assets/js/calendar.js"></script>
+</head>
+<body onload="setDate();">
+	<button onclick="calendar();">Calendar</button>
+	<div id="showCalendar"></div>
+	<div id="day"></div>
+	<input type="date" id="myDate">
+</body>
+</html>
