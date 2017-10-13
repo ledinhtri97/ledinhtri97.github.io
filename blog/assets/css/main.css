@@ -2378,15 +2378,17 @@ article:last-child
 
     width: 100%;
 }
-.rotate-90 {
+.rotate90 {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-     display: block;
-    margin: 0 0 1em 0;
+
+    display: block;
+    margin: 2.5em 0 3em 0;
 }
+
 .image.title {
     display: block;
     margin: 0 0 1em 0;
@@ -3946,7 +3948,7 @@ ol.default li
                 {
                     width: 14em;
                     position: fixed;
-                    z-index: -9000;
+                    z-index: 9000;
                     top: 0;
 
                     display: block;
