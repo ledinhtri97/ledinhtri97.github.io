@@ -1,0 +1,90 @@
+Các công việc cần làm:
+
+1 - Về môn tính toán song song:
++ lý thuyết các chưong
++ bài tập lớn về phân trùng ảnh sử dụng Hadoop 
+(Viết chương trình so trùng ảnh dùng “The Skein Hash Function Family” trên Hadoop)
+* Lý thuyết: 
+* Tìm hiểu Hadoop
+* Tìm hiểu “The Skein Hash Function Family”
+* Giải pháp loại các ảnh trùng nhau trong một tập ảnh lớn
+* Hiện thực:
+* Viết chương trình
+* Đánh giá hiệu suất trên hệ thống thực.
+//
+•Problem: Find the maximum monthly temperature for each year from weather reports
+•Input: A set of records with format as:
+<Year/Month, Average Temperature of that month>
+
+  - (200707,100), (200706,90)
+
+  - (200508, 90), (200607,100)
+
+  - (200708, 80), (200606,80)
+
+•Question: write down the Map and Reduce function to solve this problem
+Assume we split the input by line
+//
+
+2 - Về Kiến trúc máy tính:
++ bài tập, code MIPS
+
+3 - Nhập môn AI:
++ tìm hiểu các giải thuật
++ bài tập lớn về game sử dụng AI
+
+4 - XSTK
++ bài tập làm thêm + BTL
+
+5 - Phân tích thiết kế giải thuật
++ đọc sách làm bài tập
++ chú ý bài tập lớn, nghiên cứu lấy mẫu Gibb, tìm hiểu lý thuyết tâp viết paper
++ thi gĩưa kỳ quan trọng
+
+6 - English
++ học từ vựng và làm reading và listening thi toeic
++ xem phim không phụ đề
++ luyện nói hàng ngày
+
+7 - Lập trình thêm về python, java, và javascrip
+
+====================================================================================
+Top 10 Technologies To Learn In 2018 | Trending Technologies 2018
+------------------------------------------------------------------------------------
+10 RBA - Robotic Process Automation
+9 Intelligent Apps (Chat-bots, Virtual Assistants)
+8 IoT (Internet of Things) - electronic, software, sensors (collect and exchange data)
+7 DevOps
+6 Angular& React
+5 Cloud Computing
+4 Big Data
+3 AR & VR (augmented and virtual reality)
+2 Blockchain
+1 Artificial Intelligence﻿
+====================================================================================
+
+[ Wednesday, 28 February 2018 ]
+
+- Install Hadoop on Ubuntu 16.04
+
+
+[ Saturday, 10 March 2018]
+
+Hướng dẫn sử dụng Gitlab dành cho sinh viên
+Gitlab tutorial dành cho TA sẽ được dùng đối tượng là sinh viên, sẽ gồm 2 phần chính:
+Thao tác với Git (pull, commit/push, tag, branch, fork,...)
+Giới thiệu về CI (Continuous Integration – tích hợp liên tục)
+Check status CI cho project đang làm
+
+Đối với phần thao tác với Git, do quá nhiều nội dung cần phải trình bày nên mình xin được suggest 1 vài document có ích với các bạn
+https://backlog.com/git-tutorial/vn/reference/
+https://thachpham.com/series/git-co-ban
+http://rogerdudler.github.io/git-guide/index.vi.html
+https://github.com/hocchudong/git-github-for-sysadmin
+
+Đối với phần Giới thiệu về CI, thì các bạn có thể tham khảo một số document như sau:
+https://kipalog.com/posts/Giai-thich-don-gian-ve-CI---Continuous-Integration--Tich-hop-lien-tuc-
+https://oanhnn.github.io/2016-07-08/what-is-continuous-integration.html 
+https://oanhnn.github.io/slides/2016-07-08-continuous-integration.html#/cover
+
+=========
