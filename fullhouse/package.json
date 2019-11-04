@@ -1,0 +1,35 @@
+{
+  "name": "apptraffic",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run build-main\"",
+    "prod": "concurrently \"npm run prod-main\"",
+    "build-main": "webpack --mode development ./dev/main.js --output ./static/js/main.js",
+    "prod-main": "webpack --mode production ./dev/main.js --output ./static/js/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.1.3",
+    "@material-ui/icons": "^4.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "classnames": "^2.2.6",
+    "core-js": "^3.0.1"
+  }
+}
