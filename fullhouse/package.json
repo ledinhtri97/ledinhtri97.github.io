@@ -5,10 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run build-main\"",
-    "prod": "concurrently \"npm run prod-main\"",
-    "build-main": "webpack --mode development ./dev/main.js --output ./static/js/main.js",
-    "prod-main": "webpack --mode production ./dev/main.js --output ./static/js/main.js",
+    "dev": "concurrently \"npm run build-site\"",
+    "prod": "concurrently \"npm run prod-site\"",
+    "build-site": "webpack --mode development ./dev/site.js --output ./static/js/site.js",
+    "prod-site": "webpack --mode production ./dev/site.js --output ./static/js/site.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
