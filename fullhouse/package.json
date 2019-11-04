@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "concurrently \"npm run build-site\"",
     "prod": "concurrently \"npm run prod-site\"",
-    "build-site": "webpack --mode development ./dev/site.js --output ./static/js/site.js",
-    "prod-site": "webpack --mode production ./dev/site.js --output ./static/js/site.js",
+    "build-site": "webpack --mode development ./app/site.js --output ./static/js/site.js",
+    "prod-site": "webpack --mode production ./app/site.js --output ./static/js/site.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
