@@ -1,4 +1,4 @@
-name: "VGG_VOC0712Plus_SSD_300x300_ft_deploy"
+name: "VGG_VOC0712_SSD_300x300_deploy"
 input: "data"
 input_shape {
   dim: 1
@@ -394,6 +394,7 @@ layer {
       type: "constant"
       value: 0
     }
+    dilation: 1
   }
 }
 layer {
@@ -426,6 +427,7 @@ layer {
       type: "constant"
       value: 0
     }
+    dilation: 1
   }
 }
 layer {
@@ -458,6 +460,7 @@ layer {
       type: "constant"
       value: 0
     }
+    dilation: 1
   }
 }
 layer {
@@ -861,13 +864,18 @@ layer {
 }
 layer {
   name: "conv4_3_norm_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv4_3_norm_mbox_loc_perm"
   top: "conv4_3_norm_mbox_loc_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
-}
+} 
 layer {
   name: "conv4_3_norm_mbox_conf"
   type: "Convolution"
@@ -909,11 +917,16 @@ layer {
 }
 layer {
   name: "conv4_3_norm_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv4_3_norm_mbox_conf_perm"
   top: "conv4_3_norm_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -923,8 +936,8 @@ layer {
   bottom: "data"
   top: "conv4_3_norm_mbox_priorbox"
   prior_box_param {
-    min_size: 21.0
-    max_size: 45.0
+    min_size: 30.0
+    max_size: 60.0
     aspect_ratio: 2
     flip: true
     clip: false
@@ -933,6 +946,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 8
+    offset: 0.5
   }
 }
 layer {
@@ -976,11 +990,16 @@ layer {
 }
 layer {
   name: "fc7_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "fc7_mbox_loc_perm"
   top: "fc7_mbox_loc_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1024,11 +1043,16 @@ layer {
 }
 layer {
   name: "fc7_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "fc7_mbox_conf_perm"
   top: "fc7_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1038,8 +1062,8 @@ layer {
   bottom: "data"
   top: "fc7_mbox_priorbox"
   prior_box_param {
-    min_size: 45.0
-    max_size: 99.0
+    min_size: 60.0
+    max_size: 111.0
     aspect_ratio: 2
     aspect_ratio: 3
     flip: true
@@ -1049,6 +1073,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 16
+    offset: 0.5
   }
 }
 layer {
@@ -1092,11 +1117,16 @@ layer {
 }
 layer {
   name: "conv6_2_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv6_2_mbox_loc_perm"
   top: "conv6_2_mbox_loc_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1140,11 +1170,16 @@ layer {
 }
 layer {
   name: "conv6_2_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv6_2_mbox_conf_perm"
   top: "conv6_2_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1154,8 +1189,8 @@ layer {
   bottom: "data"
   top: "conv6_2_mbox_priorbox"
   prior_box_param {
-    min_size: 99.0
-    max_size: 153.0
+    min_size: 111.0
+    max_size: 162.0
     aspect_ratio: 2
     aspect_ratio: 3
     flip: true
@@ -1165,6 +1200,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 32
+    offset: 0.5
   }
 }
 layer {
@@ -1208,12 +1244,17 @@ layer {
 }
 layer {
   name: "conv7_2_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv7_2_mbox_loc_perm"
   top: "conv7_2_mbox_loc_flat"
-  flatten_param {
-    axis: 1
-  }
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
+  } 
 }
 layer {
   name: "conv7_2_mbox_conf"
@@ -1256,11 +1297,16 @@ layer {
 }
 layer {
   name: "conv7_2_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv7_2_mbox_conf_perm"
   top: "conv7_2_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1270,8 +1316,8 @@ layer {
   bottom: "data"
   top: "conv7_2_mbox_priorbox"
   prior_box_param {
-    min_size: 153.0
-    max_size: 207.0
+    min_size: 162.0
+    max_size: 213.0
     aspect_ratio: 2
     aspect_ratio: 3
     flip: true
@@ -1281,6 +1327,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 64
+    offset: 0.5
   }
 }
 layer {
@@ -1324,11 +1371,16 @@ layer {
 }
 layer {
   name: "conv8_2_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv8_2_mbox_loc_perm"
   top: "conv8_2_mbox_loc_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1372,11 +1424,16 @@ layer {
 }
 layer {
   name: "conv8_2_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv8_2_mbox_conf_perm"
   top: "conv8_2_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1386,8 +1443,8 @@ layer {
   bottom: "data"
   top: "conv8_2_mbox_priorbox"
   prior_box_param {
-    min_size: 207.0
-    max_size: 261.0
+    min_size: 213.0
+    max_size: 264.0
     aspect_ratio: 2
     flip: true
     clip: false
@@ -1396,6 +1453,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 100
+    offset: 0.5
   }
 }
 layer {
@@ -1439,11 +1497,16 @@ layer {
 }
 layer {
   name: "conv9_2_mbox_loc_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv9_2_mbox_loc_perm"
   top: "conv9_2_mbox_loc_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1487,11 +1550,16 @@ layer {
 }
 layer {
   name: "conv9_2_mbox_conf_flat"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "conv9_2_mbox_conf_perm"
   top: "conv9_2_mbox_conf_flat"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1501,7 +1569,7 @@ layer {
   bottom: "data"
   top: "conv9_2_mbox_priorbox"
   prior_box_param {
-    min_size: 261.0
+    min_size: 264.0
     max_size: 315.0
     aspect_ratio: 2
     flip: true
@@ -1511,6 +1579,7 @@ layer {
     variance: 0.2
     variance: 0.2
     step: 300
+    offset: 0.5
   }
 }
 layer {
@@ -1579,11 +1648,16 @@ layer {
 }
 layer {
   name: "mbox_conf_flatten"
-  type: "Flatten"
+  type: "Reshape"
   bottom: "mbox_conf_softmax"
   top: "mbox_conf_flatten"
-  flatten_param {
-    axis: 1
+  reshape_param {
+    shape {
+      dim: 0
+      dim: -1
+      dim: 1
+      dim: 1
+    }
   }
 }
 layer {
@@ -1606,10 +1680,11 @@ layer {
       top_k: 400
     }
     save_output_param {
-      label_map_file: "data/VOC0712Plus/labelmap_voc.prototxt"
+      label_map_file: "data/VOC0712/labelmap_voc.prototxt"
     }
     code_type: CENTER_SIZE
     keep_top_k: 200
+    confidence_threshold: 0.01
   }
 }
 
